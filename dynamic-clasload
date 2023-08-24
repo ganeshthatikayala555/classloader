@@ -1,0 +1,21 @@
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Main class is being executed.");
+        Helper helper = new Helper();///
+        helper.doSomething();
+    }
+}
+
+// Helper.java
+public class Helper {
+    public void doSomething() {
+        System.out.println("Helper class is doing something.");
+    }
+}
+
+//he application class loader reads the classpath and locates the Main class in the Main.class file. It loads the Main class into memory.
+
+//The main method of the Main class is executed. Within this method, an instance of the Helper class is created.
+
+//Since the Helper class is not loaded yet, the application class loader is triggered again to load the Helper class from the Helper.class file. This class is loaded into memory.
